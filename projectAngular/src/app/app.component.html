@@ -1,0 +1,17 @@
+<div style="text-align:center">
+  <h1>
+    LISTE DE POKEMON
+  </h1>
+
+<input #searchText type="text" (keyup.enter)="searchPokemon(searchText.value)" [ngModel]="">
+<div *ngFor=" let p of pokemon">
+{{p.id}}
+  <img src={{p.sprite}}>
+{{p.name}}
+</div>
+
+ 
+  </div>
+
+
+
