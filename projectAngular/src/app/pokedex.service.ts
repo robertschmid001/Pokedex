@@ -10,17 +10,28 @@ export class PokedexService {
     apiRoot:string = 'https://itunes.apple.com/search';
     results:Object[];
     loading:boolean;
+    pokemonInfos:Object;;
+    pokemonName:string;
+
     constructor(private http: Http) {
         this.results = [];
         this.loading = false;
+
     }
     getPokemonbyName(name:string) {
+      let pokemonName = "test"
         let promise = new Promise((resolve, reject) => {
           this.http.get(`${this.baseUrl+name}`)
             .toPromise()
             .then(
               res => { // Success
                 console.log(res.json());
+                let pokemonInfos = res.json();
+                console.log("#" + pokemonInfos.id)
+                console.log("Nom du pokemon: " + pokemonInfos.name)
+                this.pokemonName = pokemonInfos.name;
+                /*console.log("Type(s): " + pokemonInfos.types[1].type.name)*/
+                console.log("Poids: " + pokemonInfos.weight);
                 resolve();
               }
             );
