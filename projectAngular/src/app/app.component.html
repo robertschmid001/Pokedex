@@ -1,17 +1,15 @@
 <div style="text-align:center">
   <h1>
-    LISTE DE POKEMON
+    LISTE DE TOUS LES POKEMONS
   </h1>
 
-<input #searchText type="text" (keyup.enter)="searchPokemon(searchText.value)" [ngModel]="">
-<div>
+  <input #searchText type="text" (keyup.enter)="searchPokemon(searchText.value)" [ngModel]="">
+  <div>
 
-  {{pokemonInfos | json}}
+    {{pokemonName}}
+    {{pokemonType}}
 
-</div>
-
- 
   </div>
 
 
-
+</div>

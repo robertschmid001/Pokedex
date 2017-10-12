@@ -11,12 +11,13 @@ import { Pokemon } from './pokemon'
 
 
 
-
 export class AppComponent {
   pokemon: Pokemon[] = [];
   isLoading: boolean = false;
   error: boolean = false;
-
+  pokemonInfos: any;
+  pokemonName = "";
+  pokemonType = "";
   constructor(private pokedexService: PokedexService) {
 
   }
@@ -25,7 +26,12 @@ export class AppComponent {
   //  this.loadMore();
   }
   searchPokemon(input) {
-    console.log(input)
-    this.pokedexService.getPokemonbyName(input);
+    this.pokedexService.getPokemonbyName(input).subscribe(res => { // Success
+      let pokemonInfos = res.json();
+      console.log(pokemonInfos);
+      this.pokemonName = pokemonInfos.name
+      this.pokemonType = pokemonInfos.types[0].type.name
+      console.log(this.pokemonName)
+    })
   }
 }
