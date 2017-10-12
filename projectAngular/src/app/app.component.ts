@@ -12,26 +12,29 @@ import { Pokemon } from './pokemon'
 
 
 export class AppComponent {
-  pokemon: Pokemon[] = [];
-  isLoading: boolean = false;
-  error: boolean = false;
+  //private baseSpriteUrl: string = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
+  private baseSpriteUrl: string = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
+  //("00" + id).slice(-3)
+
   pokemonInfos: any;
-  pokemonName = "";
-  pokemonType = "";
+
+
+
   constructor(private pokedexService: PokedexService) {
 
   }
 
   ngOnInit() {
-  //  this.loadMore();
+    //  this.loadMore();
   }
   searchPokemon(input) {
-    this.pokedexService.getPokemonbyName(input).subscribe(res => { // Success
-      let pokemonInfos = res.json();
-      console.log(pokemonInfos);
-      this.pokemonName = pokemonInfos.name
-      this.pokemonType = pokemonInfos.types[0].type.name
-      console.log(this.pokemonName)
-    })
+    this.pokemonInfos = this.pokedexService.getPokemonbyName(input);
+  }
+
+  pokemonImageUrl(id: number) {
+    if (!id) {
+      return null;
+    }
+    return "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + ("00" + id).slice(-3) + ".png";
   }
 }

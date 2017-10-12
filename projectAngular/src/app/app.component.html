@@ -5,11 +5,12 @@
 
   <input #searchText type="text" (keyup.enter)="searchPokemon(searchText.value)" [ngModel]="">
   <div>
-
-    {{pokemonName}}
-    {{pokemonType}}
+    <img *ngIf="pokemonImageUrl((pokemonInfos | async )?.id)" [src]="pokemonImageUrl((pokemonInfos | async )?.id)"> Name = {{(pokemonInfos | async )?.name}}
+    <br> id = {{(pokemonInfos | async )?.id}}
+    <br> height = {{(pokemonInfos | async )?.height}}
+    <br> weight = {{(pokemonInfos | async )?.weight}}
+    <br> type 1 = {{(pokemonInfos | async )?.types[0].type.name}}
+    <br> type 2 = {{(pokemonInfos | async )?.types[1].type.name}}
 
   </div>
-
-
 </div>

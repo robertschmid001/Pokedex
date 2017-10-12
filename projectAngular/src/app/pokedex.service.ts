@@ -1,25 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from "@angular/common/http";
 import 'rxjs/Rx';
 
 
 @Injectable()
 export class PokedexService {
-  private baseUrl: string = 'https://pokeapi.co/api/v2/pokemon/';
-  private baseSpriteUrl: string = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
-  apiRoot: string = 'https://itunes.apple.com/search';
-  results: Object[];
-  loading: boolean;
-  pokemonInfos: Object;;
-  pokemonName: string;
+  private baseUrl: string = 'http://pokeapi.salestock.net/api/v2/pokemon/';
 
-  constructor(private http: Http) {
-    this.results = [];
-    this.loading = false;
-
+  constructor(private http: HttpClient) {
   }
   getPokemonbyName(name: string) {
-    return this.http.get(`${this.baseUrl + name}`);
-  }
-
+    return this.http.get(this.baseUrl + name).share();
+  }  
 }
+
+
+
+      //  sprite: `${this.baseSpriteUrl}${id}.png`,
