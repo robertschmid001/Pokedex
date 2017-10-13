@@ -1,0 +1,58 @@
+.pokedexBG{
+    text-align:center;
+    background-color:orange
+}
+.pokedexTab{
+    position: relative;
+    background-size:cover;
+    width: 100vw;
+    min-height: 500px;
+}
+.pokedexPad{
+    position: absolute;
+    left:0;    
+
+}
+.title{
+    position: absolute;
+    Left: 620px;
+    top: 40px;
+    width: 380px;
+}
+.pokeball{
+    position: absolute;
+    Left: 980px;
+    top: 110px;
+    width: 110px;
+}
+.Pokinfos{
+    position: absolute;
+    background-color: rgb(5, 10, 41);
+    width: 310px;
+    height: 332px;
+    left: 618px;
+    top: 427px;
+}
+.pokesearch{
+    position: absolute;
+    z-index: 100;
+    top: 314px;
+    left: 657px;
+    width: 290px;
+    height: 40px;
+    border-radius: 10px;
+}
+.pokeImageBG{
+    position: absolute;
+    width: 309px;
+    height: 331px;
+    left: 94px;
+    top: 333px;
+    background-color: aqua;
+}
+.pokeImage{
+    width: 309px;
+    height: 331px;
+    left: 94px;
+    top: 333px;
+}

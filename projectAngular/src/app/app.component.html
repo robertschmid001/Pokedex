@@ -1,16 +1,26 @@
-<div style="text-align:center">
-  <h1>
-    LISTE DE TOUS LES POKEMONS
-  </h1>
+<div class="container-fluid pokedexBG">
+  <input class="pokesearch" #searchText type="text" (keyup.enter)="searchPokemon(searchText.value)" [ngModel]="">
+  <img class="pokeball" src="../assets/images/Pokeball.png">
+  <img class="title" src="../assets/images/pokedex.png">
 
-  <input #searchText type="text" (keyup.enter)="searchPokemon(searchText.value)" [ngModel]="">
-  <div>
-    <img *ngIf="pokemonImageUrl((pokemonInfos | async )?.id)" [src]="pokemonImageUrl((pokemonInfos | async )?.id)"> Name = {{(pokemonInfos | async )?.name}}
-    <br> id = {{(pokemonInfos | async )?.id}}
-    <br> height = {{(pokemonInfos | async )?.height}}
-    <br> weight = {{(pokemonInfos | async )?.weight}}
-    <br> type 1 = {{(pokemonInfos | async )?.types[0].type.name}}
-    <br> type 2 = {{(pokemonInfos | async )?.types[1].type.name}}
 
+  <div class="container-fluid">
+    <div class="pokedexTab">
+      <div class="Pokinfos">
+        Name = {{(pokemonInfos | async )?.name}}
+        <br> id = {{(pokemonInfos | async )?.id}}
+        <br> height = {{(pokemonInfos | async )?.height}}
+        <br> weight = {{(pokemonInfos | async )?.weight}}
+        <br> type 1 = {{(pokemonInfos | async )?.types[0].type.name}}
+        <br> type 2 = {{(pokemonInfos | async )?.types[1].type.name}}
+      </div>
+      <div class="pokeImageBG">
+        <img class="pokeImage" *ngIf="pokemonImageUrl((pokemonInfos | async )?.id)" [src]="pokemonImageUrl((pokemonInfos | async )?.id)">
+      </div>
+      <img class="pokedexPad" src="../assets/images/pokedextrans.png">
+
+
+
+    </div>
   </div>
 </div>
