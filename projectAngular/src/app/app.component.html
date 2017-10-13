@@ -5,12 +5,12 @@
   </div>
   <div class="pokedexTab">
     <div class="Pokinfos">
-      <p *ngIf="(pokemonInfos | async )?.name" > Name : {{(pokemonInfos | async )?.name}}</p><br>
-      <br> > id : {{(pokemonInfos | async )?.id}}<br>
-      <br> > height : {{(pokemonInfos | async )?.height}}
-      <br> > weight : {{(pokemonInfos | async )?.weight}}<br>
-      <br> > type 1 : {{(pokemonInfos | async )?.types[0].type.name}}
-      <br> > type 2 : {{(pokemonInfos | async )?.types[1].type.name}}<br>
+      <p *ngIf="(pokemonInfos | async )?.name" > > Name : {{(pokemonInfos | async )?.name}}</p><br>
+      <br><p *ngIf="(pokemonInfos | async )?.id" > > id : {{(pokemonInfos | async )?.id}}</p><br>
+      <br><p *ngIf="(pokemonInfos | async )?.height" > > height : {{(pokemonInfos | async )?.height}}</p>
+      <br><p *ngIf="(pokemonInfos | async )?.weight" > > weight : {{(pokemonInfos | async )?.weight}}</p><br>
+      <br><p *ngIf="(pokemonInfos | async )?.types[0].type.name" > > type 1 : {{(pokemonInfos | async )?.types[0].type.name}}</p>
+      <br><p *ngIf="(pokemonInfos | async )?.types[1].type.name" > > type 2 : {{(pokemonInfos | async )?.types[1].type.name}}</p><br>
     </div>
     <div class="pokeImageBG">
       <img class="pokeImage" *ngIf="pokemonImageUrl((pokemonInfos | async )?.id)" [src]="pokemonImageUrl((pokemonInfos | async )?.id)">
