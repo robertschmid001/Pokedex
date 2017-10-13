@@ -1,58 +1,136 @@
-.pokedexBG{
-    text-align:center;
-    background-color:orange
+
+.pokedexBG {
+    text-align: center;
+    background-color: orange
 }
-.pokedexTab{
+
+.pokedexTab {
     position: relative;
-    background-size:cover;
+    background-size: cover;
     width: 100vw;
     min-height: 500px;
+    left: 15vw;
 }
-.pokedexPad{
-    position: absolute;
-    left:0;    
 
-}
-.title{
+.pokedexPad {
     position: absolute;
-    Left: 620px;
-    top: 40px;
-    width: 380px;
+    left: 0;
+    height: 800px;
 }
-.pokeball{
+
+.logo{
     position: absolute;
-    Left: 980px;
-    top: 110px;
-    width: 110px;
+    z-index: 1919;
+    Left: 793px;
+    top: 39px;
+    width: 331px;
+    transform: rotate(13deg);
 }
-.Pokinfos{
-    position: absolute;
-    background-color: rgb(5, 10, 41);
-    width: 310px;
-    height: 332px;
-    left: 618px;
-    top: 427px;
+.title {
+    width: 100%;
 }
-.pokesearch{
+.pokeball {
     position: absolute;
+    z-index: 4000;
+    Left: 318px;
+    top: -50px;
+    width: 52px;
+}
+
+.Pokinfos {
+    text-align: left;
+    font-size: 2 0px;
+    position: absolute;
+    background-color: rgb(5, 14, 66);
+    width: 285px;
+    height: 310px;
+    left: 570px;
+    top: 390px;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: greenyellow;
+    font-family: 'Cutive Mono', monospace;
+    text-decoration: blink;
+}
+
+.pokesearch {
+    position: absolute;
+    background-color: rgb(7, 14, 58);
+    border: 0;
     z-index: 100;
-    top: 314px;
-    left: 657px;
-    width: 290px;
+    top: 290px;
+    left: 570px;
+    width: 280px;
     height: 40px;
     border-radius: 10px;
+    padding-left: 20px;
+    color: greenyellow;
+    font-family: 'Cutive Mono', monospace;
 }
-.pokeImageBG{
+
+.pokeImageBG {
     position: absolute;
     width: 309px;
     height: 331px;
-    left: 94px;
-    top: 333px;
+    left: 80px;
+    top: 300px;
     background-color: aqua;
+    background-image: url(../assets/images/Pattern_Grid.png);
+    background-size: 10%;
 }
-.pokeImage{
-    width: 309px;
-    height: 331px;
-    left: 94px;
-    top: 333px;
+
+.pokeImage {
+    width: 90%;
+    margin-top: 5%;
 }
+
+
+
+/*  BOUTONS CLIGNOTANTS */
+
+
+.led-red {
+    position: absolute;
+    top: 84px;
+    left: 241px;
+    z-index: 3000;
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    background-color: #F00;
+/* background-image: url(../assets/images/bouton1.png);*/
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+    -webkit-animation: blinkRed 0.5s infinite;
+    -moz-animation: blinkRed 0.5s infinite;
+    -ms-animation: blinkRed 0.5s infinite;
+    -o-animation: blinkRed 0.5s infinite;
+    animation: blinkRed 0.5s infinite;
+    }
+    
+    @-webkit-keyframes blinkRed {
+    from { background-color: #F00; }
+    50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+    to { background-color: #F00; }
+    }
+    @-moz-keyframes blinkRed {
+    from { background-color: #F00; }
+    50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+    to { background-color: #F00; }
+    }
+    @-ms-keyframes blinkRed {
+    from { background-color: #F00; }
+    50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+    to { background-color: #F00; }
+    }
+    @-o-keyframes blinkRed {
+    from { background-color: #F00; }
+    50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+    to { background-color: #F00; }
+    }
+    @keyframes blinkRed {
+    from { background-color: #F00; }
+    50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+    to { background-color: #F00; }
+    }

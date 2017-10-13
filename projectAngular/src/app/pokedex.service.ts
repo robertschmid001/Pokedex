@@ -5,7 +5,7 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class PokedexService {
-  private baseUrl: string = 'http://pokeapi.salestock.net/api/v2/pokemon/';
+  private baseUrl: string = 'https://pokeapi.co/api/v2/pokemon/';
 
   constructor(private http: HttpClient) {
   }

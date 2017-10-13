@@ -1,26 +1,22 @@
 <div class="container-fluid pokedexBG">
-  <input class="pokesearch" #searchText type="text" (keyup.enter)="searchPokemon(searchText.value)" [ngModel]="">
-  <img class="pokeball" src="../assets/images/Pokeball.png">
-  <img class="title" src="../assets/images/pokedex.png">
-
-
-  <div class="container-fluid">
-    <div class="pokedexTab">
-      <div class="Pokinfos">
-        Name = {{(pokemonInfos | async )?.name}}
-        <br> id = {{(pokemonInfos | async )?.id}}
-        <br> height = {{(pokemonInfos | async )?.height}}
-        <br> weight = {{(pokemonInfos | async )?.weight}}
-        <br> type 1 = {{(pokemonInfos | async )?.types[0].type.name}}
-        <br> type 2 = {{(pokemonInfos | async )?.types[1].type.name}}
-      </div>
-      <div class="pokeImageBG">
-        <img class="pokeImage" *ngIf="pokemonImageUrl((pokemonInfos | async )?.id)" [src]="pokemonImageUrl((pokemonInfos | async )?.id)">
-      </div>
-      <img class="pokedexPad" src="../assets/images/pokedextrans.png">
-
-
-
+  <div class="logo">
+    <img class="pokeball" src="../assets/images/Pokeball.png">
+    <img class="title" src="../assets/images/pokedex.png">
+  </div>
+  <div class="pokedexTab">
+    <div class="Pokinfos">
+      > Name : <br>{{(pokemonInfos | async )?.name}}
+      <br> > id : <br>{{(pokemonInfos | async )?.id}}
+      <br> > height : <br>{{(pokemonInfos | async )?.height}}
+      <br> > weight : <br>{{(pokemonInfos | async )?.weight}}
+      <br> > type 1 : <br>{{(pokemonInfos | async )?.types[0].type.name}}
+      <br> > type 2 : <br>{{(pokemonInfos | async )?.types[1].type.name}}
     </div>
+    <div class="pokeImageBG">
+      <img class="pokeImage" *ngIf="pokemonImageUrl((pokemonInfos | async )?.id)" [src]="pokemonImageUrl((pokemonInfos | async )?.id)">
+    </div>
+    <img class="pokedexPad" src="../assets/images/pokedextrans.png">
+    <input class="pokesearch" #searchText type="text" placeholder=">" (keyup.enter)="searchPokemon(searchText.value)" [ngModel]="">
+    <div class="led-red"></div>
   </div>
 </div>
