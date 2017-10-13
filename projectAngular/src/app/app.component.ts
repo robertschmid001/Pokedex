@@ -17,6 +17,8 @@ export class AppComponent {
   //("00" + id).slice(-3)
 
   pokemonInfos: any;
+  InputText = this.InputText;
+  
 
 
 
@@ -29,6 +31,18 @@ export class AppComponent {
   }
   searchPokemon(input) {
     this.pokemonInfos = this.pokedexService.getPokemonbyName(input);
+    var a = new SpeechSynthesisUtterance();
+    a.text = "pokedex analysing, please wait..."
+    a.lang = 'en-GB';
+
+    var u = new SpeechSynthesisUtterance();
+    u.text = "that is a," + this.InputText
+    u.lang = 'en-GB';
+    
+    speechSynthesis.speak(a);
+    speechSynthesis.pause();
+    speechSynthesis.resume();
+    speechSynthesis.speak(u);
   }
 
   pokemonImageUrl(id: number) {

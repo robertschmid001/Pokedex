@@ -1,3 +1,7 @@
+p{
+    margin: 0;
+    padding: 0;
+}
 
 .pokedexBG {
     text-align: center;
@@ -5,7 +9,7 @@
     width:100vw;
     background-color: orange;
     background-image: url(../assets/images/273289.jpg);
-    background-size: 140%;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
@@ -14,7 +18,7 @@
     background-size: cover;
     width: 100vw;
     min-height: 500px;
-    left: 15vw;
+    left: 25vw;
 }
 
 .pokedexPad {
@@ -26,10 +30,10 @@
 .logo{
     position: absolute;
     z-index: 1919;
-    Left: 793px;
-    top: 39px;
-    width: 331px;
-    transform: rotate(13deg);
+    Left: 930px;
+    top: 40px;
+    width: 450px;
+    transform: rotate(7deg);
 }
 .title {
     width: 100%;
@@ -44,7 +48,7 @@
 
 .Pokinfos {
     text-align: left;
-    font-size: 2 0px;
+    font-size: 20px;
     position: absolute;
     background-color: rgb(5, 14, 66);
     width: 285px;
