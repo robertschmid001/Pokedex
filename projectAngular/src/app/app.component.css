@@ -1,7 +1,12 @@
 
 .pokedexBG {
     text-align: center;
-    background-color: orange
+    height: 100vh;
+    width:100vw;
+    background-color: orange;
+    background-image: url(../assets/images/273289.jpg);
+    background-size: 140%;
+    background-repeat: no-repeat;
 }
 
 .pokedexTab {
